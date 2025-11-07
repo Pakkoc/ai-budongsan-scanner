@@ -1,0 +1,38 @@
+[기술 스택 — 최소비용 조합(확정)]
+
+- 프론트: Flutter(Web/App) + Next.js(SEO 랜딩)
+
+- 백엔드: FastAPI + PostgreSQL(+pgvector)
+   ↳ 실제 운영 DB는 Supabase Postgres
+
+- DB: Supabase Postgres (pgvector 사용)
+
+- AI: LangChain 또는 LangGraph 기반 RAG + LLM API(OpenAI GPT-4o 또는 Gemini 1.5 Flash)
+
+- Auth: Supabase Auth
+
+(추후에 결정)
+- 스토리지: Cloudflare R2
+- CDN: Cloudflare CDN (R2를 오리진으로 사용)
+
+
+작은 팁
+표기: “Cloudflare CDN(R2 origin)”으로 쓰면 더 정확해요.
+
+성능/비용: 임베딩은 저가 모델(예: bge-small/text-embedding-3-small) + 캐시(선택: Redis) 쓰면 API 비용 더 줄일 수 있어요.
+
+아키텍처 한 줄 요약
+사용자 → Cloudflare CDN → Next.js / Flutter Web → FastAPI → Supabase(Postgres+pgvector) & Cloudflare R2 → LLM(API).
+
+
+
+====================================================================================================
+
+(현재할건 아니고 Develop할 내용)
+[체류시간 높이기 위한 방법]
+참고한 동영상 
+
+챗봇으로 마무리하면은 어떤 내용을 참고햇는지에 대해서 공개를 해준다.
+참고해야할 영상을 보여 줄 수 잇으면 추천동영상 보여주기(볼꺼면 봐라)
+
+제휴업체 -> 버튼 누르면 숨기기 + 출저 문서보기, 참고 문서(영상)보기 ----> 이를 통해서 신뢰성을 줄 수있다.  (우리사이트에서 나가지 않도록)
