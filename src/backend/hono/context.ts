@@ -8,12 +8,21 @@ export type AppConfig = {
     url: string;
     serviceRoleKey: string;
   };
+  gemini: {
+    apiKey: string;
+    defaultModel: string;
+  };
+  toss: {
+    secretKey: string;
+    clientKey: string;
+  };
 };
 
 export type AppVariables = {
   supabase: SupabaseClient;
   logger: AppLogger;
   config: AppConfig;
+  userId?: string;
 };
 
 export type AppEnv = {
@@ -26,6 +35,7 @@ export const contextKeys = {
   supabase: 'supabase',
   logger: 'logger',
   config: 'config',
+  userId: 'userId',
 } as const satisfies Record<keyof AppVariables, keyof AppVariables>;
 
 export const getSupabase = (c: AppContext) =>
@@ -36,3 +46,6 @@ export const getLogger = (c: AppContext) =>
 
 export const getConfig = (c: AppContext) =>
   c.get(contextKeys.config) as AppConfig;
+
+export const getUserId = (c: AppContext) =>
+  c.get(contextKeys.userId) as string | undefined;
