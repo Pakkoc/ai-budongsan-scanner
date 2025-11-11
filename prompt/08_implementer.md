@@ -4,8 +4,8 @@
 - 절대 하드코딩된 값을 사용하지마세요.
 - /docs/rules/tdd.md 문서를 참고하여, TDD 가이드라인을 엄격히 준수하세요.
 
-1. /docs/{requirement, persona, techstack, structure,prd,userflow,database,common-modules,test-plan}.md, /docs/rules/tdd.md문서를 읽고 프로젝트의 기획을 구체적으로 파악한다.
-2. 각각의 [/docs/usecases/N-name/spec.md,/docs/pages/N-name/{plan,state}.md] 문서를 읽고 구현 관련 세부사항을 파악한다.
+1. /docs/{requirement, persona, techstack, structure,prd,userflow,database,common-modules}.md, /docs/rules/tdd.md문서를 읽고 프로젝트의 기획을 구체적으로 파악한다.
+2. 모든 N-name에 대해서서 [/docs/usecases/{N-name}/spec.md,/docs/pages/{N-name}/{plan,state}.md] 문서를 읽고 구현 관련 세부사항을 파악한다.
 3. 외부 서비스 연동 관련 정보는 /docs/external/\*.md 를 참고하여 반드시 오류없이 작성한다.
 
 ---

@@ -2,7 +2,7 @@
 
 위 유스케이스 문서의 기능을 구현하기위한 최소한의 모듈화 설계 진행하세요.
 
-1. /docs/{requirement, persona, techstack, structure,prd,userflow,database,common-modules,test-plan}.m, /docs/rules/tdd, /docs/external/\*.md 문서를 읽고 프로젝트의 상태를 구체적으로 파악한다.
+1. /docs/{requirement, persona, techstack, structure,prd,userflow,database,common-modules}.m, /docs/rules/tdd, /docs/external/\*.md 문서를 읽고 프로젝트의 상태를 구체적으로 파악한다.
 2. 해당 페이지와 연관된 유스케이스 문서들을 /docs/usecases 경로에서 적절히 찾아 읽는다.
 3. 해당 페이지와 연관된 상태관리리 문서들을 /docs/pages/{N-name}/state.md 경로에서 적절히 찾아 읽는다.
 3. 코드베이스에서 관련 파일들을 탐색하여 이미 구현된 기능, convention, guideline 등을 파악한다.
