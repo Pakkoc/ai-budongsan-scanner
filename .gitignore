@@ -55,3 +55,6 @@ next-env.d.ts
 /AGENTS.md
 /AGENTS.md.bak
 # END Ruler Generated Files
+
+# test build artifacts
+.tmp/

@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": ".tmp/tests",
+    "module": "Node16",
+    "moduleResolution": "node16",
+    "target": "ES2020",
+    "noEmit": false,
+    "declaration": false,
+    "emitDeclarationOnly": false,
+    "isolatedModules": false,
+    "types": ["node"],
+    "rootDir": "."
+  },
+  "include": [
+    "src/domain/**/*.ts",
+    "src/shared/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  "exclude": ["node_modules", ".tmp/tests"]
+}
