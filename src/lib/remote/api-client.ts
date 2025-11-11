@@ -7,6 +7,20 @@ const apiClient = axios.create({
   },
 });
 
+export const buildApiUrl = (path: string) => {
+  const baseURL = process.env.NEXT_PUBLIC_API_BASE_URL;
+  if (!baseURL) {
+    return path;
+  }
+
+  const normalizedBase = baseURL.endsWith("/")
+    ? baseURL.slice(0, -1)
+    : baseURL;
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+
+  return `${normalizedBase}${normalizedPath}`;
+};
+
 type ErrorPayload = {
   error?: {
     message?: string;
